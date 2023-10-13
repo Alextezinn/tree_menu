@@ -1,0 +1,7 @@
+.github
+.git
+.dockeringore
+.env.example
+.gitignore
+docker-compose.yml
+Dockerfile

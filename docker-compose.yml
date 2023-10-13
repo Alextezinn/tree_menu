@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: web
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - ${DJANGO_PORT}:${DJANGO_PORT}
+    env_file:
+      - .env
+    expose:
+      - ${DJANGO_PORT}
+    depends_on:
+      - db
+    volumes:
+      - static_volume:/home/tree_menu/staticfiles/
+    networks:
+      - menu
+
+  db:
+    container_name: postgres-db
+    image: postgres:15.0
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - ${POSTGRES_PORT}:${POSTGRES_PORT}
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - menu
+
+  nginx:
+    container_name: nginx
+    image: nginx:1.21.3
+    ports:
+      - ${NGINX_OUTPUT_PORT}:${NGINX_OUTPUT_PORT}
+    volumes:
+      - static_volume:/home/tree_menu/staticfiles/
+      - ./conf:/etc/nginx:ro
+    depends_on:
+      - web
+    networks:
+      - menu
+
+volumes:
+  db:
+  static_volume:
+
+networks:
+  menu:

@@ -1,0 +1,32 @@
+types {
+# Images
+  image/bmp                             bmp;
+  image/gif                             gif;
+  image/jpeg                            jpeg jpg;
+  image/png                             png;
+  image/tiff                            tif tiff;
+  image/vnd.wap.wbmp                    wbmp;
+  image/webp                            webp;
+  image/x-icon                          ico cur;
+  image/x-jng                           jng;
+
+# JavaScript
+  application/javascript                js;
+  application/json                      json;
+
+# Web fonts
+  application/font-woff                 woff;
+  application/vnd.ms-fontobject         eot;
+  application/x-font-ttf                ttc ttf;
+  font/opentype                         otf;
+  image/svg+xml                         svg svgz;
+
+
+# Web style
+  text/css                              css;
+
+  application/pdf                       pdf;
+
+# Archive
+  application/zip                       zip;
+}

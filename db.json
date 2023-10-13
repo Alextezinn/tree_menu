@@ -1,0 +1,70 @@
+[
+{
+  "model": "menu_app.menu",
+  "pk": 1,
+  "fields": {
+    "title": "main_menu",
+    "slug": "main_menu"
+  }
+},
+{
+  "model": "menu_app.menuitem",
+  "pk": 1,
+  "fields": {
+    "title": "item1",
+    "slug": "item1",
+    "parent": null,
+    "menu": 1
+  }
+},
+{
+  "model": "menu_app.menuitem",
+  "pk": 2,
+  "fields": {
+    "title": "item2",
+    "slug": "item2",
+    "parent": null,
+    "menu": 1
+  }
+},
+{
+  "model": "menu_app.menuitem",
+  "pk": 3,
+  "fields": {
+    "title": "item11",
+    "slug": "item11",
+    "parent": 1,
+    "menu": 1
+  }
+},
+{
+  "model": "menu_app.menuitem",
+  "pk": 4,
+  "fields": {
+    "title": "item12",
+    "slug": "item12",
+    "parent": 1,
+    "menu": 1
+  }
+},
+{
+  "model": "menu_app.menuitem",
+  "pk": 5,
+  "fields": {
+    "title": "item21",
+    "slug": "item21",
+    "parent": 2,
+    "menu": 1
+  }
+},
+{
+  "model": "menu_app.menuitem",
+  "pk": 6,
+  "fields": {
+    "title": "item111",
+    "slug": "item111",
+    "parent": 3,
+    "menu": 1
+  }
+}
+]

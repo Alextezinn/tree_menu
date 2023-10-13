@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "tree-menu"
+version = "0.1.0"
+description = ""
+authors = ["Alextezinn <alexandertezin1999@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "tree_menu"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.2.6"
+pylint = "^3.0.1"
+psycopg2-binary = "^2.9.9"
+gunicorn = "^21.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
